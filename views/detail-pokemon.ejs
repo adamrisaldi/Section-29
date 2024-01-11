@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/styles/detail-pokemon.css">
+    <title>Pokemon Details</title>
+</head>
+<body>
+    <div class="pokemon-card">
+        <h1><%= pokemon.name %></h1>
+        <img src="<%= pokemon.sprites.front_default %>"  alt="<%= pokemon.name %>">
+        <p>Type:</p>
+        <% pokemon.types.forEach(pokemonType => { %>
+            <p><%= pokemonType.type.name %></p>
+        <% }); %>
+        <p>Height: <%= pokemon.height %>0 cm </p>
+        <p>Weight: <%= pokemon.weight %> lbs </p>
+    </div>
+</body>
+</html>

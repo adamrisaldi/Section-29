@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/styles/list-pokemon.css">
+    <title>Pokemon List</title>
+</head>
+<body>
+    <h1>List of Pokemons</h1>
+      <% pokemons.results.forEach(pokemon => { %>
+      <div class="container">
+        <div class="card">
+          <h2><a href="/<%= pokemon.url.split('/').slice(-2, -1) %>"><%= pokemon.name %></a></h2>
+        </div>
+      </div>
+      <% }); %>
+</body>
+</html>
